@@ -1,0 +1,31 @@
+.menuItem {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+
+	.menuText {
+		opacity: 0;
+		max-width: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		margin-left: 0;
+		transition:
+			opacity 0.3s ease,
+			max-width 0.3s ease,
+			margin 0.3s ease;
+	}
+}
+
+.open {
+	.menuItem {
+		.menuText {
+			opacity: 1;
+			max-width: 200px;
+			margin-left: 15px;
+		}
+	}
+}
+
+.icon {
+	font-size: 24px;
+}

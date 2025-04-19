@@ -1,0 +1,29 @@
+.header {
+	height: 64px;
+	display: flex;
+	align-items: center;
+}
+
+.leftSidebar {
+	width: 280px;
+	padding: 15px;
+
+	.icon {
+		font-size: 24px;
+		cursor: pointer;
+	}
+}
+
+.body {
+	width: 100%;
+}
+
+.rightSidebar {
+	width: 56px;
+
+	.icon {
+		font-size: 24px;
+		cursor: pointer;
+		transform: scaleX(-1);
+	}
+}

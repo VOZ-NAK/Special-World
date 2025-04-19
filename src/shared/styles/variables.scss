@@ -1,0 +1,18 @@
+:root {
+	// Font families
+	--fontRoboto: 'Roboto', serif;
+
+	// Breakpoints
+	// --breakpoint-sm: 576px;
+	// --breakpoint-md: 768px;
+	// --breakpoint-lg: 1024px;
+	// --breakpoint-xl: 1280px;
+
+	--color-text: #18191b;
+	--bg-dark: #f8f9fa;
+	--bg-light: #fff;
+
+	//dark theme
+	html[data-theme='dark'] {
+	}
+}
