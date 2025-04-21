@@ -17,6 +17,7 @@ export default {
 		'^@/utils/(.*)$',
 		'^@/config/(.*)$',
 		'^@/providers/(.*)$',
+		'^@/widgets/(.*)$',
 		'^../(.*)',
 		'^./(.*)',
 		'(.scss)$'

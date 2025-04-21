@@ -2,7 +2,7 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	background-color: var(--bg-dark);
+	background-color: var(--bg-secondary);
 }
 
 .page {
@@ -13,7 +13,8 @@
 .main {
 	flex: 1 1 auto;
 	padding: 15px;
-	background-color: var(--bg-light);
+	margin-right: 15px;
+	background-color: var(--bg-primary);
 	border-radius: 16px;
 	margin-bottom: 15px;
 }

@@ -1,5 +1,11 @@
-import { Home, NotFound } from '@/pages'
-import Documentation from '@/pages/documentation/Documentation'
+import {
+	Documentation,
+	ForgotPassword,
+	Home,
+	Login,
+	NotFound,
+	Register
+} from '@/pages'
 
 export const routes = [
 	{
@@ -10,6 +16,21 @@ export const routes = [
 	{
 		path: '/documentation',
 		element: Documentation,
+		isAuth: false
+	},
+	{
+		path: '/login',
+		element: Login,
+		isAuth: false
+	},
+	{
+		path: '/register',
+		element: Register,
+		isAuth: false
+	},
+	{
+		path: '/forgot-password',
+		element: ForgotPassword,
 		isAuth: false
 	},
 	{

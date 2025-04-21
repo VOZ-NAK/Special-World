@@ -19,11 +19,20 @@
 }
 
 .rightSidebar {
-	width: 56px;
+	display: flex;
+	gap: 15px;
+	padding: 15px;
 
 	.icon {
 		font-size: 24px;
 		cursor: pointer;
 		transform: scaleX(-1);
+	}
+
+	.login {
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+		gap: 5px;
 	}
 }

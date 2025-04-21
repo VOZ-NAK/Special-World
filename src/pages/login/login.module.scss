@@ -1,0 +1,23 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.formOptions {
+	display: flex;
+	justify-content: space-between;
+}
+
+.submit {
+	padding: 15px;
+	width: 100%;
+	border-radius: 8px;
+	color: var(--bg-primary);
+	font-weight: 700;
+	background-color: var(--accent);
+}
+
+.footer {
+	align-self: center;
+}

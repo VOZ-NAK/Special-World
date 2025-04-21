@@ -1,0 +1,57 @@
+.checkbox {
+	display: flex;
+	gap: 15px;
+}
+
+.checkbox label {
+	cursor: pointer;
+}
+
+.checkbox input {
+	position: absolute;
+	opacity: 0;
+}
+
+.checkbox input:checked + label svg path {
+	stroke-dashoffset: 0;
+}
+
+.checkbox input:focus + label {
+	transform: scale(1.03);
+}
+
+.checkbox input + label {
+	display: block;
+	border: 1px solid var(--color-text);
+	width: 15px;
+	height: 15px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+
+	@media (min-width: em(1920)) {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.checkbox input + label:active {
+	transform: scale(1.05);
+	border-radius: 12px;
+}
+
+.checkbox input + label svg {
+	pointer-events: none;
+	padding: 5%;
+}
+
+.checkbox input + label svg path {
+	fill: none;
+	stroke: var(--color-text);
+	stroke-width: 4px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 101;
+	transition: all 250ms cubic-bezier(1, 0, 0.37, 0.91);
+}

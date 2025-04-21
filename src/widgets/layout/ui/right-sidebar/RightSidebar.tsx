@@ -2,15 +2,16 @@ import cn from 'classnames'
 import { FC } from 'react'
 import { useLocation } from 'react-router-dom'
 
+import { useAppSelector } from '@/shared/lib/hooks/redux'
+
 import { DocumentationSidebar } from './components'
 import styles from './right-sidebar.module.scss'
 
-interface IRightSidebar {
-	isRightSidebarOpen: boolean
-}
-
-const RightSidebar: FC<IRightSidebar> = ({ isRightSidebarOpen }) => {
+const RightSidebar: FC = () => {
 	const { pathname } = useLocation()
+	const isRightSidebarOpen = useAppSelector(
+		state => state.sidebar.isRightSidebarOpen
+	)
 
 	const renderContent = () => {
 		switch (pathname) {
@@ -27,7 +28,7 @@ const RightSidebar: FC<IRightSidebar> = ({ isRightSidebarOpen }) => {
 		<aside
 			className={cn(styles.rightSidebar, { [styles.open]: isRightSidebarOpen })}
 		>
-			{renderContent()}
+			<div className={styles.rightSidebarContent}>{renderContent()}</div>
 		</aside>
 	)
 }

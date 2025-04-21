@@ -1,0 +1,35 @@
+.rightSidebar {
+	width: 0;
+	padding: 0;
+	overflow: hidden;
+	// margin-left: 15px;
+	transition:
+		width 0.3s ease,
+		// margin-left 0.3s ease,
+		padding 0.3s ease;
+	position: relative;
+}
+
+.rightSidebarContent {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	transition:
+		opacity 0.3s ease 0.1s,
+		visibility 0s linear 0.3s;
+}
+
+.open {
+	width: 200px;
+	// margin-left: 0px;
+
+	.rightSidebarContent {
+		opacity: 1;
+		visibility: visible;
+		position: static;
+		transition: opacity 0.3s ease;
+	}
+}

@@ -1,18 +1,22 @@
 :root {
-	// Font families
 	--fontRoboto: 'Roboto', serif;
-
-	// Breakpoints
-	// --breakpoint-sm: 576px;
-	// --breakpoint-md: 768px;
-	// --breakpoint-lg: 1024px;
-	// --breakpoint-xl: 1280px;
+	--accent: #0057ff;
 
 	--color-text: #18191b;
-	--bg-dark: #f8f9fa;
-	--bg-light: #fff;
+	--bg-primary: #fff;
+	--bg-secondary: #f8f9fa;
+}
 
-	//dark theme
-	html[data-theme='dark'] {
-	}
+[data-theme='dark'] {
+	--color-text: #ffffff;
+	--bg-primary: #121212;
+	--bg-secondary: #1e1e1e;
+}
+
+body {
+	background-color: var(--bg-primary);
+	color: var(--color-text);
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
 }

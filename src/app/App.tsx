@@ -1,13 +1,11 @@
-import { BrowserRouter } from 'react-router-dom'
+import { useThemeEffect } from '@/shared/lib/hooks'
 
 import Navigation from './navigation/Navigation'
 
 function App() {
-	return (
-		<BrowserRouter>
-			<Navigation />
-		</BrowserRouter>
-	)
+	useThemeEffect()
+
+	return <Navigation />
 }
 
 export default App
