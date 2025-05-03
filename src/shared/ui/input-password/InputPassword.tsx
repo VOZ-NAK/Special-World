@@ -1,11 +1,18 @@
-import { FC } from 'react'
+import { FC, InputHTMLAttributes } from 'react'
 import { FiEye, FiEyeOff } from 'react-icons/fi'
 
 import { useToggle } from '@/shared/lib/hooks'
 
 import styles from './input-password.module.scss'
 
-const InputPassword: FC = props => {
+interface IInputPassword extends InputHTMLAttributes<HTMLInputElement> {
+	placeholder?: string
+}
+
+const InputPassword: FC<IInputPassword> = ({
+	placeholder = 'Введите пароль',
+	...props
+}) => {
 	const [isVisible, toggleVisibility] = useToggle()
 
 	return (
@@ -13,7 +20,7 @@ const InputPassword: FC = props => {
 			<input
 				type={isVisible ? 'text' : 'password'}
 				className={styles.input}
-				placeholder='Введите пароль'
+				placeholder={placeholder}
 				{...props}
 			/>
 			<button

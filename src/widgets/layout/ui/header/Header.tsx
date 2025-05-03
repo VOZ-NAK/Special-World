@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 
 import { toggleTheme } from '@/entities/theme/model/themeSlice'
 
+import LogoSVG from '@/shared/assets/icons/LogoSVG'
 import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks/redux'
 
 import { toggleLeftSidebar, toggleRightSidebar } from '../../model/sidebarSlice'
 
-// Импортируем экшен для темы
 import styles from './header.module.scss'
 
 const Header: FC = () => {
@@ -24,6 +24,9 @@ const Header: FC = () => {
 					className={styles.icon}
 					onClick={() => dispatch(toggleLeftSidebar())}
 				/>
+				<Link to='/'>
+					<LogoSVG />
+				</Link>
 			</aside>
 			<div className={styles.body}></div>
 			<aside className={styles.rightSidebar}>
@@ -33,9 +36,9 @@ const Header: FC = () => {
 					aria-label={`Switch to ${currentTheme === 'light' ? 'dark' : 'light'} theme`}
 				>
 					{currentTheme === 'light' ? (
-						<FiMoon className={styles.icon} />
-					) : (
 						<FiSun className={styles.icon} />
+					) : (
+						<FiMoon className={styles.icon} />
 					)}
 				</button>
 

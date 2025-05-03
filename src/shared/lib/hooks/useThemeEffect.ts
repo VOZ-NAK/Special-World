@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 
+import { ActionStorage, manageStorage } from '../storage/manageStorage'
+
 import { useAppSelector } from './redux'
 
 export const useThemeEffect = () => {
@@ -7,6 +9,7 @@ export const useThemeEffect = () => {
 
 	useEffect(() => {
 		document.documentElement.setAttribute('data-theme', currentTheme)
-		localStorage.setItem('theme', currentTheme)
+
+		manageStorage(ActionStorage.Set, ['theme'], [currentTheme])
 	}, [currentTheme])
 }

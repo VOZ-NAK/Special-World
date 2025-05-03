@@ -1,6 +1,7 @@
 export { default as Layout } from '../widgets/layout/Layout'
-export { default as LayoutAuth } from './layout-auth/LayoutAuth'
+export { default as LayoutAuth } from '../widgets/layout-auth/LayoutAuth'
 export { default as Typography } from './ui/typography/Typography'
 export { default as Input } from './ui/input/Input'
 export { default as InputPassword } from './ui/input-password/InputPassword'
 export { default as Checkbox } from './ui/checkbox/Сheckbox'
+export { default as Button } from './ui/button/Button'

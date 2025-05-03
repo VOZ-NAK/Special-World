@@ -4,7 +4,9 @@ import {
 	Home,
 	Login,
 	NotFound,
-	Register
+	Register,
+	ResetPassword,
+	StudyMaterials
 } from '@/pages'
 
 export const routes = [
@@ -16,6 +18,11 @@ export const routes = [
 	{
 		path: '/documentation',
 		element: Documentation,
+		isAuth: false
+	},
+	{
+		path: '/study-materials',
+		element: StudyMaterials,
 		isAuth: false
 	},
 	{
@@ -31,6 +38,11 @@ export const routes = [
 	{
 		path: '/forgot-password',
 		element: ForgotPassword,
+		isAuth: false
+	},
+	{
+		path: '/reset-password',
+		element: ResetPassword,
 		isAuth: false
 	},
 	{

@@ -1,0 +1,15 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.formOptions {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.footer {
+	align-self: center;
+}

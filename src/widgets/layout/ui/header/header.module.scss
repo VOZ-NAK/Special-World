@@ -1,12 +1,16 @@
 .header {
-	height: 64px;
+	height: 100%;
+	max-height: 58px;
 	display: flex;
 	align-items: center;
 }
 
 .leftSidebar {
+	display: flex;
+	gap: 25px;
 	width: 280px;
 	padding: 15px;
+	align-items: center;
 
 	.icon {
 		font-size: 24px;

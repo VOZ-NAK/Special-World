@@ -1,4 +1,4 @@
-import { Layout } from '@/shared'
+import { Layout } from '@/widgets'
 
 const Documentation = () => {
 	return <Layout>Documentation</Layout>

@@ -1,0 +1,15 @@
+.documentationSidebar {
+	display: flex;
+	flex-direction: column;
+	padding: 15px 0;
+
+	li {
+		cursor: pointer;
+		padding: 15px;
+	}
+
+	.active {
+		border-radius: 25px 0 0 25px;
+		background-color: var(--accent-soft);
+	}
+}

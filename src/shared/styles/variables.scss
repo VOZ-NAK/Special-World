@@ -1,22 +1,17 @@
 :root {
 	--fontRoboto: 'Roboto', serif;
 	--accent: #0057ff;
+	--accent-soft: #0057ff1a;
 
 	--color-text: #18191b;
 	--bg-primary: #fff;
 	--bg-secondary: #f8f9fa;
+	--border: rgba(100, 121, 143, 0.12);
 }
 
 [data-theme='dark'] {
 	--color-text: #ffffff;
 	--bg-primary: #121212;
 	--bg-secondary: #1e1e1e;
-}
-
-body {
-	background-color: var(--bg-primary);
-	color: var(--color-text);
-	transition:
-		background-color 0.3s ease,
-		color 0.3s ease;
+	--border: #444746;
 }

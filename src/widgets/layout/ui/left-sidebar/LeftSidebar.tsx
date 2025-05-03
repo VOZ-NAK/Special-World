@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import { FC } from 'react'
 import { HiOutlineClipboardDocumentList, HiOutlineHome } from 'react-icons/hi2'
+import { LiaChalkboardTeacherSolid } from 'react-icons/lia'
 import { Link, useLocation } from 'react-router-dom'
 
 import { useAppSelector } from '@/shared/lib/hooks/redux'
@@ -19,7 +20,6 @@ const LeftSidebar: FC = () => {
 				[styles.open]: isLeftSidebarOpen
 			})}
 		>
-			<div></div>
 			<div className={styles.menu}>
 				<Link
 					to='/'
@@ -39,6 +39,15 @@ const LeftSidebar: FC = () => {
 				>
 					<HiOutlineClipboardDocumentList className={styles.icon} />
 					<p className={styles.menuText}>Документация</p>
+				</Link>
+				<Link
+					to='/study-materials'
+					className={cn(styles.menuItem, {
+						[styles.active]: location.pathname === '/study-materials'
+					})}
+				>
+					<LiaChalkboardTeacherSolid className={styles.icon} />
+					<p className={styles.menuText}>Учебные пособия</p>
 				</Link>
 			</div>
 		</aside>
